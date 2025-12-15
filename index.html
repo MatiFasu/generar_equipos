@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Equipos Equilibrados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚽ Creador de Equipos Equilibrados</h1>
+        <p>Paso 1: Pega la lista de jugadores (uno por línea, como en WhatsApp) y pulsa 'Preparar Niveles'.</p>
+
+        <div class="input-section">
+            <div id="playerInputContainer">
+                <textarea id="playerInput" rows="10" placeholder="Pega la lista de jugadores aquí, uno por línea."></textarea>
+            </div>
+
+            <div class="button-group">
+                <button id="prepareBtn">⚙️ Preparar Niveles</button>
+                <button id="balanceBtn" style="display: none;">⚖️ Generar Equipos</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="team team-a">
+                <h2>🔵 Equipo A (<span id="totalA">0</span>)</h2>
+                <ul id="teamAList">
+                    </ul>
+            </div>
+            <div class="team team-b">
+                <h2>🟡 Equipo B (<span id="totalB">0</span>)</h2>
+                <ul id="teamBList">
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="copy-section">
+            <button id="generateTxtBtn" style="display: none;">📲 Generar TXT para WhatsApp (Copiar)</button>
+        </div>
+
+        <p class="status-message" id="statusMessage">Pega los nombres de tus jugadores y pulsa 'Preparar Niveles'.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
