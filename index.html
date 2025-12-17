@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Equipos Pro - Drag & Drop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚽ Equipos Equilibrados</h1>
+        
+        <div class="input-section">
+            <div id="playerInputContainer">
+                <textarea id="playerInput" rows="8" placeholder="Pega la lista de jugadores aquí, uno por línea...
+1. Jugador 1
+2. Jugador 2
+..."></textarea>
+            </div>
+            <div class="button-group">
+                <button id="prepareBtn">⚙️ Preparar Niveles</button>
+                <button id="balanceBtn" style="display: none;">⚖️ Generar Equipos</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2>Equipo A</h2>
+                    <span class="total-badge" id="totalA">0</span>
+                </div>
+                <ul id="teamAList" class="drop-zone" data-team="A"></ul>
+            </div>
+
+            <div class="team-container">
+                <div class="team-header">
+                    <h2>Equipo B</h2>
+                    <span class="total-badge" id="totalB">0</span>
+                </div>
+                <ul id="teamBList" class="drop-zone" data-team="B"></ul>
+            </div>
+        </div>
+
+        <div class="copy-section">
+            <button id="generateTxtBtn" style="display: none;">📲 Copiar para WhatsApp</button>
+        </div>
+        
+        <p class="status-message" id="statusMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
