@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     balanceBtn.addEventListener('click', () => {
         const rows = document.querySelectorAll('#levelTable tbody tr');
         const players = Array.from(rows).map(row => ({
-            name: row.cells[0].innerText,
+            name: row.cells[0].innerText.replace(/^\d+/, '').trim(),
             level: parseFloat(row.querySelector('.l-in').value),
             isGK: row.querySelector('.gk-in').checked
         }));
@@ -164,4 +164,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const msg = `Equipo A\n-----------\n${getNames('teamAList')}\n\nEquipo B\n-----------\n${getNames('teamBList')}`;
         navigator.clipboard.writeText(msg).then(() => alert("✅ Copiado al portapapeles"));
     });
+
 });
